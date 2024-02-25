@@ -1,0 +1,24 @@
+<% if (success && success.length) { %> <!-- because success is an array, so if no listing is created then success.length will be 0(empty array) and we want to print success when succcess.length != 0-->
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= success %>
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+        ></button>
+    </div>
+<% } %>
+
+<% if (error && error.length) { %>
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= error %>
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+        ></button>
+    </div>
+<% } %>
+
